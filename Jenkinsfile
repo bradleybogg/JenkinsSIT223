@@ -43,15 +43,15 @@
              }
              post {
                 success {
-                    mail to: "BradleyBogg@outlook.com.au"
-                    subject: "Security Scan Email: Success"
-                    body: "Security scan was successful."
+                    mail to: "BradleyBogg@outlook.com.au",
+                    subject: "Security Scan Email: Success",
+                    body: "Security scan was successful.",
                     attachLog: true
                 }
                 failure {
-                    mail to: "BradleyBogg@outlook.com.au"
-                    subject: "Security Scan Email: Failure"
-                    body: "Security scan failed."
+                    mail to: "BradleyBogg@outlook.com.au",
+                    subject: "Security Scan Email: Failure",
+                    body: "Security scan failed.",
                     attachLog: true
                 }
              }
