@@ -19,15 +19,15 @@
              }
              post {
                 success {
-                    mail to: "BradleyBogg@outlook.com.au"
-                    subject: "Unit Test Email: Success"
-                    body: "Unit integration test was successful."
+                    mail to: "BradleyBogg@outlook.com.au",
+                    subject: "Unit Test Email: Success",
+                    body: "Unit integration test was successful.",
                     attachLog: true
                 }
                 failure {
-                    mail to: "BradleyBogg@outlook.com.au"
-                    subject: "Unit Test Email: Failure"
-                    body: "Unit integration test failed."
+                    mail to: "BradleyBogg@outlook.com.au",
+                    subject: "Unit Test Email: Failure",
+                    body: "Unit integration test failed.",
                     attachLog: true
                 }
              }
