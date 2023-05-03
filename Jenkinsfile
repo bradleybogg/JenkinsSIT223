@@ -21,7 +21,7 @@
                 always {
                     emailext(
                         subject: "Unit Test Email",
-                        to: "boggbradley@gmail.com",
+                        to: "BradleyBogg@outlook.com.au",
                         body: "Unit integration test was ${currentBuild.result}",
                         attachLog: true,
                     )
@@ -42,7 +42,7 @@
                 always {
                     emailext(
                         subject: "Security Email",
-                        to: "boggbradley@gmail.com",
+                        to: "BradleyBogg@outlook.com.au",
                         body: "Security stage was ${currentBuild.result}",
                         attachLog: true,
                     )
