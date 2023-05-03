@@ -18,17 +18,14 @@
                  echo "Tests Passed: ABCDEF"
              }
              post {
-                success {
-                    mail to: "BradleyBogg@outlook.com.au",
-                    subject: "Unit Test Email: Success",
-                    body: "Unit integration test was successful.",
-                    attachLog: true
-                }
-                failure {
-                    mail to: "BradleyBogg@outlook.com.au",
-                    subject: "Unit Test Email: Failure",
-                    body: "Unit integration test failed.",
-                    attachLog: true
+                always {
+                    emailext(
+                        subject: "Unit Test Email",
+                        to: "BradleyBogg@outlook.com.au",
+                        body: "Unit integration test was ${currentBuild.result}",
+                        attachLog: true,
+                    )
+                    
                 }
              }
          }
@@ -42,17 +39,14 @@
                  echo "Performing security scan using Veracode"
              }
              post {
-                success {
-                    mail to: "BradleyBogg@outlook.com.au",
-                    subject: "Security Scan Email: Success",
-                    body: "Security scan was successful.",
-                    attachLog: true
-                }
-                failure {
-                    mail to: "BradleyBogg@outlook.com.au",
-                    subject: "Security Scan Email: Failure",
-                    body: "Security scan failed.",
-                    attachLog: true
+                always {
+                    emailext(
+                        subject: "Security Email",
+                        to: "BradleyBogg@outlook.com.au",
+                        body: "Security stage was ${currentBuild.result}",
+                        attachLog: true,
+                    )
+                    
                 }
              }
          }
